@@ -25,7 +25,7 @@ namespace Blog.Screens.UserScreens
             var user = repository.Get().FirstOrDefault(x => x.Email == userLogg.Email && x.PasswordHash == userLogg.PasswordHash)!;
 
             Console.WriteLine($"{user.Id} - {user.Name} - {user.Email} - {user.Bio} - {user.Image}");
-            var getUserPosts = new PostRepository(DataConn.Connection);
+            var getUserPosts = new PostRepository(DataConn.Connection!);
 
             Console.WriteLine("Posts: ");
             Console.WriteLine();

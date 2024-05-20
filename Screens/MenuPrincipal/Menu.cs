@@ -1,3 +1,4 @@
+using Blog.Screens.CategoryScreen;
 using Blog.Screens.PostScreens;
 using Blog.Screens.RoleScreens;
 using Blog.Screens.TagScreens;
@@ -9,8 +10,6 @@ namespace Blog.Screens.MenuPrincipal
     {
         public static void Load()
         {
-
-
             Console.Clear();
             Console.WriteLine("Meu Blog");
             Console.WriteLine("-----------------");
@@ -19,12 +18,12 @@ namespace Blog.Screens.MenuPrincipal
             Console.WriteLine("1 - Gestão de usuário");
             Console.WriteLine("2 - Gestão de Tags");
             Console.WriteLine("3 - Gestão de categoria");
-            Console.WriteLine("4 - Gestão de tag");
+            Console.WriteLine("4 - Gestão Posts");
+            Console.WriteLine("6 - Sair da aplicação");
             Console.WriteLine("5 - Vincular perfil/usuário");
             Console.WriteLine("6 - Vincular post/tag");
             Console.WriteLine("7 - Relatórios");
-            Console.WriteLine("8 - Posts");
-            Console.WriteLine("9 - Sair");
+
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
 
@@ -37,12 +36,12 @@ namespace Blog.Screens.MenuPrincipal
                     MenuTagScreen.Load();
                     break;
                 case 3:
-                    MenuRoleScreen.Load();
+                    MenuCategory.Load();
                     break;
-                case 8:
+                case 4:
                     MenuPostScreen.Load();
                     break;
-                case 9:
+                case 6:
                     Console.Clear();
                     Environment.Exit(0);
                     break;

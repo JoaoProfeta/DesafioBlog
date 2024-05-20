@@ -17,7 +17,7 @@ namespace Blog.Screens.UserScreens
             Console.Write(" 1 - Sim ");
             Console.Write(" 2 - Não, voltar para o menu ");
 
-            var option = int.Parse(Console.ReadLine());
+            var option = int.Parse(Console.ReadLine()!);
             if (option != 1 && option != 2)
             {
                 Console.WriteLine("opção incorreta, Digite novamente ");
@@ -44,7 +44,7 @@ namespace Blog.Screens.UserScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível exluir a tag");
+                Console.WriteLine("Não foi possível exluir o Usuário");
                 Console.WriteLine(ex.Message);
             }
         }
