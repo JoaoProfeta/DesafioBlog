@@ -17,7 +17,7 @@ namespace Blog.Screens.PostScreens
             string email = Console.ReadLine()!;
             Console.WriteLine("Senha: ");
             string password = Console.ReadLine()!;
-            
+
             User? user = GetUser(email, password);
             if (user != null)
             {
@@ -27,6 +27,8 @@ namespace Blog.Screens.PostScreens
             else
             {
                 Console.WriteLine("Email ou senha incorretos.");
+                Console.ReadKey();
+                MenuUser.Load();
             }
 
             return UserLogged.logged;

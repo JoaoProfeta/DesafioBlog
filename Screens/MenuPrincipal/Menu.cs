@@ -10,15 +10,15 @@ namespace Blog.Screens.MenuPrincipal
     {
         public static void Load()
         {
-            
-            
+
+
             Console.Clear();
             Console.WriteLine("Meu Blog");
             Console.WriteLine("-----------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
             Console.WriteLine("1 - Gestão de usuário");
-            Console.WriteLine("2 - Gestão de perfil");
+            Console.WriteLine("2 - Gestão de Tags");
             Console.WriteLine("3 - Gestão de categoria");
             Console.WriteLine("4 - Gestão de tag");
             Console.WriteLine("5 - Vincular perfil/usuário");

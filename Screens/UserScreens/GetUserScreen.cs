@@ -10,23 +10,31 @@ namespace Blog.Screens.UserScreens
     {
         public static void Load()
         {
+            var user = UserLogged.logged;
+
             Console.Clear();
-            Console.WriteLine("pegar um usuario usando Email e senha.");
+            Console.WriteLine("Veja suas informações");
             Console.WriteLine("-------------");
-            Console.WriteLine("Digite seu email");
-            var email = Console.ReadLine()!;
-            Console.WriteLine("Digite sua senha");
-            var password = Console.ReadLine()!;
-            Console.WriteLine("-------------");
-            GetUser(email, password);
+            GetUser(user);
             Console.ReadKey();
             MenuUserScreen.Load();
         }
-        private static void GetUser(string email, string password)
+        private static void GetUser(User userLogg)
         {
             var repository = new Repository<User>(DataConn.Connection!);
-            var user = repository.Get().FirstOrDefault(x => x.Email == email && x.PasswordHash == password)!;
-            Console.WriteLine($"{user.Id} - {user.Name} - {user.Email} - {user.Bio}");
+            var user = repository.Get().FirstOrDefault(x => x.Email == userLogg.Email && x.PasswordHash == userLogg.PasswordHash)!;
+
+            Console.WriteLine($"{user.Id} - {user.Name} - {user.Email} - {user.Bio} - {user.Image}");
+            var getUserPosts = new PostRepository(DataConn.Connection);
+
+            Console.WriteLine("Posts: ");
+            Console.WriteLine();
+            var posts = getUserPosts.GetPostsByAuthorId(user.Id);
+            foreach (var post in posts)
+            {
+                Console.Write($" Id :{post.Id} \n Titulo: {post.Title} \n Categoria: {post.CategoryId} \n Data de criação: {post.CreateDate} \n Data da ultima atualização: {post.LastUpdateDate}");
+            }
+
         }
     }
 }

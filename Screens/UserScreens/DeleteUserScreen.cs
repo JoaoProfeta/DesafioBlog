@@ -1,6 +1,7 @@
 using System;
 using Blog.Models;
 using Blog.Repositories;
+using Blog.Screens.PostScreens;
 
 namespace Blog.Screens.UserScreens
 {
@@ -8,12 +9,28 @@ namespace Blog.Screens.UserScreens
     {
         public static void Load()
         {
+            var user = UserLogged.logged;
             Console.Clear();
             Console.WriteLine("Excluir um usuário");
             Console.WriteLine("-------------");
-            Console.Write("Qual o id do usuário que deseja exluir? ");
-            var id = Console.ReadLine();
-            Delete(int.Parse(id!));
+            Console.Write("Tem certeza que deseja excluir o usuário? ");
+            Console.Write(" 1 - Sim ");
+            Console.Write(" 2 - Não, voltar para o menu ");
+
+            var option = int.Parse(Console.ReadLine());
+            if (option != 1 && option != 2)
+            {
+                Console.WriteLine("opção incorreta, Digite novamente ");
+                return;
+            }
+            else if (option == 1)
+            {
+                Delete(user.Id);
+            }
+            else
+            {
+                MenuUserScreen.Load();
+            }
             Console.ReadKey();
             MenuUserScreen.Load();
         }
