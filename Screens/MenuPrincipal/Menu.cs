@@ -2,7 +2,6 @@ using Blog.Screens.PostScreens;
 using Blog.Screens.RoleScreens;
 using Blog.Screens.TagScreens;
 using Blog.Screens.UserScreens;
-using Microsoft.Data.SqlClient;
 
 namespace Blog.Screens.MenuPrincipal
 {
@@ -25,6 +24,7 @@ namespace Blog.Screens.MenuPrincipal
             Console.WriteLine("6 - Vincular post/tag");
             Console.WriteLine("7 - Relatórios");
             Console.WriteLine("8 - Posts");
+            Console.WriteLine("9 - Sair");
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
 
@@ -41,6 +41,10 @@ namespace Blog.Screens.MenuPrincipal
                     break;
                 case 8:
                     MenuPostScreen.Load();
+                    break;
+                case 9:
+                    Console.Clear();
+                    Environment.Exit(0);
                     break;
                 default: Load(); break;
             }

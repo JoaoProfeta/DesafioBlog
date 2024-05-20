@@ -14,15 +14,15 @@ namespace Blog.Screens.TagScreens
             Console.Clear();
             Console.WriteLine("Atualizando o Usuário");
             Console.WriteLine("-------------");
-            Console.Write("Nome: ");
+            Console.Write($"Nome: '{user.Name}' Para :");
             var name = Console.ReadLine();
-            Console.Write("E-mail: ");
+            Console.Write($"E-mail: '{user.Email}' Para :");
             var email = Console.ReadLine();
-            Console.Write("Bio: ");
+            Console.Write($"Bio: '{user.Bio}' Para :");
             var bio = Console.ReadLine();
-            Console.Write("url da imagem: ");
+            Console.Write($"url: '{user.Image}' Para :");
             var imageUrl = Console.ReadLine();
-            Console.Write("Slug: ");
+            Console.Write($"Slug: '{user.Slug}' Para :");
             var slug = Console.ReadLine();
 
             Update(new User
