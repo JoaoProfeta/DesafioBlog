@@ -27,7 +27,9 @@ namespace Blog.Screens.PostScreens
 
             foreach (var item in posts)
             {
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine($"{item.AuthorId} - {item.Title}");
+                Console.WriteLine("-------------------------------");
             }
         }
     }

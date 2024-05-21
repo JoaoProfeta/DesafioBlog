@@ -1,5 +1,6 @@
 using Blog.Models;
 using Blog.Repositories;
+using Blog.Services;
 
 namespace Blog.Screens.UserScreens
 {
@@ -22,12 +23,13 @@ namespace Blog.Screens.UserScreens
             var imageUrl = Console.ReadLine()!;
             Console.Write("Slug: ");
             var slug = Console.ReadLine()!;
-
+           
+            
             Create(new User
             {
                 Name = name,
                 Email = email,
-                PasswordHash = passwordHash,
+                PasswordHash = EncDec.Cryp(passwordHash),
                 Bio = bio,
                 Image = imageUrl,
                 Slug = slug,

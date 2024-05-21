@@ -1,6 +1,7 @@
 using System.Text;
 using Blog.Models;
 using Blog.Repositories;
+using Blog.Screens.CategoryScreen;
 
 namespace Blog.Screens.PostScreens
 {
@@ -13,6 +14,11 @@ namespace Blog.Screens.PostScreens
             Console.WriteLine("-------------");
             Console.Write("Titulo: ");
             var title = Console.ReadLine();
+            Console.Write("Categoria do post: ");
+            ListCategories.Load(false);
+            Console.WriteLine();
+            Console.WriteLine("Digite apenas o ID");
+            var category = Console.ReadLine()!;
             Console.WriteLine("fale os detalhes de sua aplicação: ");
             Console.WriteLine("para sair da edição aperte ENTER, e na linha vazia aperte ESC");
             var body = new StringBuilder();
@@ -37,7 +43,7 @@ namespace Blog.Screens.PostScreens
             {
                 Title = title,
                 AuthorId = authorId,
-                CategoryId = categoryId,
+                CategoryId = int.Parse(category),
                 Body = body.ToString(),
                 Summary = summary.ToString(),
                 slug = slug,
