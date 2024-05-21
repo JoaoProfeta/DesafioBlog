@@ -26,18 +26,22 @@
 $ git clone https://github.com/JoaoProfeta/DesafioBlog.git
 
 ```
-## veja o artigo do Balta: 
+<h2> veja o artigo do Balta: </h2>
 <a href="https://blog.balta.io/sql-server-docker/">Instalação e configuração do docker e SQLServer</a>
-## Faça o download e instale Docker
+<h2>Faça o download e instale Docker </h2>
 <a href="https://www.docker.com/">Download docker</a>
 
-## Faça o download e instale o Azure Data Studio
+<h2> Faça o download e instale o Azure Data Studio </h2>
 <a href="https://learn.microsoft.com/pt-br/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall">Download Azure Data Studio<a/>
 
 
-## Após toda as instalções:
-<p>Abra o AzureDS com o docker rodando ISO SqlServer e Crie uma nova conexão</p>
+<h2>Após toda as instalções: </h2>
+<p>Abra o AzureDS com o docker rodando ISO SqlServer e Crie uma nova conexão, após abrir a conexão e criar um database: </p>
+<p> <a href="https://github.com/JoaoProfeta/DesafioBlog/tree/master/assets">criar database</a>, verifique as duas imagens e siga as instruções, adicione as connection string como esta ai</p>
+<p>password : 1q2w3e4r@#$ || username : sa || server : localhost,1433</p>
 
-<p>Abriu a conexão? agora va no arquivo  <a href="">Txt</a> do projeto :</p>
+<p>Abriu a conexão? crie o banco, e agora clique com o botão direito no database, clique em New Query e siga as instruções do arquivo TXT: 
+<a href="https://github.com/JoaoProfeta/DesafioBlog/blob/master/assets/blog.sql.txt">Txt</a> do projeto, Cole no SqlServer apos configura-lo : </p>
+
 
 
