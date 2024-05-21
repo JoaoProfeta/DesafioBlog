@@ -26,12 +26,18 @@
 $ git clone https://github.com/JoaoProfeta/DesafioBlog.git
 
 ```
-
+## veja o artigo do Balta: 
+<a href="https://blog.balta.io/sql-server-docker/">Instalação e configuração do docker e SQLServer</a>
 ## Faça o download e instale Docker
 <a href="https://www.docker.com/">Download docker</a>
 
 ## Faça o download e instale o Azure Data Studio
 <a href="https://learn.microsoft.com/pt-br/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall">Download Azure Data Studio<a/>
 
+
+## Após toda as instalções:
+<p>Abra o AzureDS com o docker rodando ISO SqlServer e Crie uma nova conexão</p>
+
+<p>Abriu a conexão? agora va no arquivo  <a href="">Txt</a> do projeto :</p>
 
 
