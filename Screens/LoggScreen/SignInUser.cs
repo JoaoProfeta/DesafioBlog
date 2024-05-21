@@ -37,7 +37,7 @@ namespace Blog.Screens.PostScreens
             return UserLogged.logged;
 
         }
-        private static User GetUser(string email, string password)
+        private static User GetUser(string? email, string? password)
         {
             var repository = new Repository<User>(DataConn.Connection!);
 

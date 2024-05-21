@@ -23,8 +23,8 @@ namespace Blog.Screens.UserScreens
             var imageUrl = Console.ReadLine()!;
             Console.Write("Slug: ");
             var slug = Console.ReadLine()!;
-           
-            
+
+
             Create(new User
             {
                 Name = name,

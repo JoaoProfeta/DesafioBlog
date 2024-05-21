@@ -16,27 +16,16 @@ namespace Blog.Screens.TagScreens
             Console.WriteLine("2 - Cadastrar tags");
             Console.WriteLine("3 - Atualizar tag");
             Console.WriteLine("4 - Excluir tag");
-            Console.WriteLine();
+            Console.WriteLine("5 - Voltar ao menu principal");
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
-
             switch (option)
             {
-                case 1:
-                    ListTagScreen.Load();
-                    break;
-                case 2:
-                    CreateTagScreen.Load();
-                    break;
-                case 3:
-                    UpdateTagScreen.Load();
-                    break;
-                case 4:
-                    DeleteTagScreen.Load();
-                    break;
-                case 5:
-                    Menu.Load();
-                    break;
+                case 1: ListTagScreen.Load(); break;
+                case 2: CreateTagScreen.Load(); break;
+                case 3: UpdateTagScreen.Load(); break;
+                case 4: DeleteTagScreen.Load(); break;
+                case 5: Menu.Load(); break;
                 default: Load(); break;
             }
         }

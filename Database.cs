@@ -9,7 +9,7 @@ namespace Blog
     }
     public static class UserLogged
     {
-        public static User logged;
+        public static User? logged;
 
     }
 }

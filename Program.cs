@@ -15,6 +15,10 @@ namespace Blog
         {
             DataConn.Connection = new SqlConnection(CONNECTION_STRING);
             DataConn.Connection.Open();
+            // Console.BackgroundColor = ConsoleColor.DarkBlue;
+            // Console.SetWindowSize(50, 30);
+            // Console.WindowHeight(50);
+
             MenuUser.Load();
             Console.ReadKey();
             DataConn.Connection.Close();

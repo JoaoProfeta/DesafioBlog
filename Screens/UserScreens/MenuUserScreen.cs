@@ -42,9 +42,9 @@ namespace Blog.Screens.UserScreens
                 Console.WriteLine("O que deseja fazer?");
                 Console.WriteLine();
                 Console.WriteLine("1 - Perfil do User");
-                Console.WriteLine("3 - Atualizar dados");
-                Console.WriteLine("4 - Excluir User");
-                Console.WriteLine("5 - Voltar ao menu Principal");
+                Console.WriteLine("2 - Atualizar dados");
+                Console.WriteLine("3 - Excluir User");
+                Console.WriteLine("4 - Voltar ao menu Principal");
                 Console.WriteLine();
                 short option = short.Parse(Console.ReadLine()!);
 

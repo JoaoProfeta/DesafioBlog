@@ -13,7 +13,7 @@ namespace Blog.Screens.PostScreens
         {
             Console.Clear();
             Console.WriteLine($"Lista de Posts do usuário : {userLogg.Name}");
-            Console.WriteLine("-------------");
+            Console.WriteLine("-------------------------------");
             GetAll(userLogg);
             Console.ReadKey();
             MenuPostScreen.Load();
@@ -22,13 +22,15 @@ namespace Blog.Screens.PostScreens
         private static void GetAll(User user)
         {
             //var repository = new Repository<User>(DataConn.Connection!);
-            var thisback = new PostRepository(DataConn.Connection!);
-            var posts = thisback.GetPostsByAuthorId(user.Id);
-
+            var repository = new PostRepository(DataConn.Connection!);
+            var repo = new Repository<Category>(DataConn.Connection!);
+            var posts = repository.GetPostsByAuthorId(user.Id);
+            var categorias = repo.Get().ToList();
             foreach (var item in posts)
             {
+                var selectCat = categorias.Find(x => x.Id == item.CategoryId);
                 Console.WriteLine("-------------------------------");
-                Console.WriteLine($"{item.AuthorId} - {item.Title}");
+                Console.WriteLine($"{item?.AuthorId} -{selectCat?.Name} - {item?.Title}");
                 Console.WriteLine("-------------------------------");
             }
         }

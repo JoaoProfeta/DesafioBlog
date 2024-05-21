@@ -2,6 +2,7 @@ using System.Text;
 using Blog.Models;
 using Blog.Repositories;
 using Blog.Screens.CategoryScreen;
+using Blog.Screens.TagScreens;
 
 namespace Blog.Screens.PostScreens
 {
@@ -19,6 +20,10 @@ namespace Blog.Screens.PostScreens
             Console.WriteLine();
             Console.WriteLine("Digite apenas o ID");
             var category = Console.ReadLine()!;
+            Console.WriteLine("Tags do post: ");
+            ListTagScreen.Load();
+            Console.WriteLine("Digite apenas o ID");
+            var tagId = int.Parse(Console.ReadLine()!);
             Console.WriteLine("fale os detalhes de sua aplicação: ");
             Console.WriteLine("para sair da edição aperte ENTER, e na linha vazia aperte ESC");
             var body = new StringBuilder();
@@ -50,17 +55,17 @@ namespace Blog.Screens.PostScreens
                 CreateDate = DateTime.Now,
                 LastUpdateDate = DateTime.Now
 
-            });
+            }, tagId);
             Console.ReadKey();
             MenuPostScreen.Load();
         }
-        public static void Create(Post post)
+        public static void Create(Post post, int tagId)
         {
             try
             {
-                var repository = new Repository<Post>(DataConn.Connection!);
+                Repository<Post> repository = new Repository<Post>(DataConn.Connection!);
                 repository.Create(post);
-                Console.WriteLine("Post adicionado com sucesso!");
+                VincularTag.VincularPostTag(post.Id, tagId);
             }
             catch (Exception ex)
             {

@@ -4,6 +4,7 @@ using Blog.Screens.RoleScreens;
 using Blog.Screens.TagScreens;
 using Blog.Screens.UserScreens;
 
+
 namespace Blog.Screens.MenuPrincipal
 {
     public static class Menu
@@ -19,9 +20,8 @@ namespace Blog.Screens.MenuPrincipal
             Console.WriteLine("2 - Gestão de Tags");
             Console.WriteLine("3 - Gestão de categoria");
             Console.WriteLine("4 - Gestão Posts");
+            Console.WriteLine("5 - Vincular post/tag");
             Console.WriteLine("6 - Sair da aplicação");
-            Console.WriteLine("5 - Vincular perfil/usuário");
-            Console.WriteLine("6 - Vincular post/tag");
             Console.WriteLine("7 - Relatórios");
 
             Console.WriteLine();
@@ -29,18 +29,10 @@ namespace Blog.Screens.MenuPrincipal
 
             switch (option)
             {
-                case 1:
-                    MenuUserScreen.Load();
-                    break;
-                case 2:
-                    MenuTagScreen.Load();
-                    break;
-                case 3:
-                    MenuCategory.Load();
-                    break;
-                case 4:
-                    MenuPostScreen.Load();
-                    break;
+                case 1: MenuUserScreen.Load(); break;
+                case 2: MenuTagScreen.Load(); break;
+                case 3: MenuCategory.Load(); break;
+                case 4: MenuPostScreen.Load(); break;
                 case 6:
                     Console.Clear();
                     Environment.Exit(0);
