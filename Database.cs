@@ -12,4 +12,8 @@ namespace Blog
         public static User? logged;
 
     }
+    public static class UserLoggedOut
+    {
+        public static User? loggedOut = null;
+    }
 }

@@ -32,6 +32,7 @@ namespace Blog.Screens.PostScreens
                 Console.WriteLine("-------------------------------");
                 Console.WriteLine($"{item?.AuthorId} -{selectCat?.Name} - {item?.Title}");
                 Console.WriteLine("-------------------------------");
+
             }
         }
     }

@@ -18,6 +18,7 @@ namespace Blog.Screens.UserScreens
             Console.Write(" 2 - Não, voltar para o menu ");
 
             var option = int.Parse(Console.ReadLine()!);
+            
             if (option != 1 && option != 2)
             {
                 Console.WriteLine("opção incorreta, Digite novamente ");

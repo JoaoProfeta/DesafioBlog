@@ -16,11 +16,13 @@ namespace Blog.Screens.PostScreens
             Console.Clear();
             Console.WriteLine("Digite seu Email e senha");
             Console.WriteLine("-------------");
+
             Console.WriteLine("E-mail: ");
             string email = Console.ReadLine()!;
+
             Console.WriteLine("Senha: ");
             string password = MaskReadLine.ReadLineMasked();
-            Console.ReadKey();
+
             User? user = GetUser(email, password);
             if (user != null)
             {

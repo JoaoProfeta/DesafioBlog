@@ -1,5 +1,6 @@
 using Blog.Models;
 using Blog.Repositories;
+using Blog.Screens.PostScreens;
 using Blog.Services;
 
 namespace Blog.Screens.UserScreens
@@ -8,22 +9,29 @@ namespace Blog.Screens.UserScreens
     {
         public static void Load()
         {
+
+
             Console.Clear();
             Console.WriteLine("Novo Usuário");
             Console.WriteLine("-------------");
+
             Console.Write("Nome: ");
             var name = Console.ReadLine()!;
+
             Console.Write("E-mail: ");
             var email = Console.ReadLine()!;
+
             Console.Write("Senha: ");
             var passwordHash = Console.ReadLine()!;
+
             Console.Write("Biografia: ");
             var bio = Console.ReadLine()!;
+            
             Console.Write("Url da imagem: ");
             var imageUrl = Console.ReadLine()!;
+            
             Console.Write("Slug: ");
             var slug = Console.ReadLine()!;
-
 
             Create(new User
             {
