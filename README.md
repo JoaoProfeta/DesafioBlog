@@ -1,7 +1,7 @@
 <h1>  Hello World!!! 🫡🫡  <h1/>
 <hr/>
 <h2> New Project 🛠️ <h2/>
-<p> Venho mostrar desafio feito no curso do Sr <a href="https://github.com/andrebaltieri">Andre Baltieri<a/>, na polataforma <a href="https://balta.io/">Balta.IO</a>!!</p>
+<p> Venho mostrar desafio feito no curso 2806 do Sr <a href="https://github.com/andrebaltieri">Andre Baltieri<a/>, na polataforma <a href="https://balta.io/">Balta.IO</a>!!</p>
 <p> O desafio consiste em Implementar novas funcionalidades a aplicação usando o ConsoleApp .net, apenas utilizando o Dapper, e o Dapper.Contrib, assim então eu fui avante e implementei as novas funcionalidades:</p>
 <h2>Novas implementações Feitas: <h2/>
 <ul>
@@ -42,6 +42,8 @@ $ git clone https://github.com/JoaoProfeta/DesafioBlog.git
 
 <p>Abriu a conexão? crie o banco, e agora clique com o botão direito no database, clique em New Query e siga as instruções do arquivo TXT: 
 <a href="https://github.com/JoaoProfeta/DesafioBlog/blob/master/assets/blog.sql.txt">Txt</a> do projeto, Cole no SqlServer apos configura-lo : </p>
+
+<h1> É isso, aproveitem e divirtam-se com o CRUD simples que fiz!!! </h1>
 
 
 
