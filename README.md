@@ -16,7 +16,22 @@
   <li>E uma nova lógica para agregar posts tags e categorias</li>
 </ul>
 <h2>Tecnologias 🛠️ </h2>
-  <hr/>
-    <img href="https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"/>
-  <hr/>
+    <img align="center" alt="tecnologias" src="https://skillicons.dev/icons?i=dotnet,cs,">
+<h2>Ferramentas 🛠️ </h2>
+    <img align="center" alt="tecnologias" src="https://skillicons.dev/icons?i=vscode,azure,docker,powershell">
+<h1>Para Testar voce deve: </h1>
+    
+```bash
+# Clone o Repositório
+$ git clone https://github.com/JoaoProfeta/DesafioBlog.git
+
+```
+
+## Faça o download e instale Docker
+<a href="https://www.docker.com/">Download docker</a>
+
+## Faça o download e instale o Azure Data Studio
+<a href="https://learn.microsoft.com/pt-br/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall">Download Azure Data Studio<a/>
+
+
 
