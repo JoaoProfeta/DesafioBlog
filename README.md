@@ -15,3 +15,8 @@
   <li>Persistir dados simples(Somente para usuários Logados)</li>
   <li>E uma nova lógica para agregar posts tags e categorias</li>
 </ul>
+<h2>Tecnologias 🛠️ </h2>
+  <hr/>
+    <img href="https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"/>
+  <hr/>
+
